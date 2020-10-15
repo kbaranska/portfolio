@@ -1,7 +1,90 @@
-$body-color: red
+$purple: #ea88f3
+$pink: #FF2079
+$blue:  #440bd4
+$dark-blue:  #04005E
 
-h1
-  color: $body-color
-  background-color: black
-  
-  
+.firstP
+  height: 100vh
+  font-size: calc(16px + 16 * ((90vw) / 600))
+
+// .card
+//   height: 150px
+//   width: 100px
+//   border-radius: 10px
+//   font-size: calc(16px + 16 * ((100vw) / 600))
+//   position: absolute
+
+
+// .cards
+//   width: 100px
+//   height: 150px
+//   perspective: 600px
+// #c1
+//   border: solid 2px red
+//   background-color: white
+// #c2
+//   background-color: blue
+
+
+body 
+  margin: 0
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-wrap: wrap
+
+
+div 
+  width: 100%
+  height: 100%
+
+.container 
+  margin: 20px
+  width: 25vw
+  height: 25vh
+  perspective: 1000px
+  background: none
+  border: none
+  outline: 1px solid transparent
+
+
+
+
+.card 
+  transition: transform 2s
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+  transform-style: preserve-3d
+  cursor: pointer
+
+.front, .back 
+  position: absolute
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  backface-visibility: hidden
+  border: 2px solid black
+  border-radius: 10px
+  background: white
+
+.back 
+  transform: rotateY(180deg)
+
+.front:hover, .back:hover 
+  bottom: 2px
+  right: 2px
+
+
+.cont
+  display: inline-block
+
+.btn 
+    width: 50px
+    padding: 3px
+    margin-bottom: 10px
+
+.back
+  img
+    width: 11vw
